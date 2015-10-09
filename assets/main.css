@@ -1,0 +1,111 @@
+
+
+.top {
+	width: 1250px;
+	height: 300px;
+
+	text-align: center;
+	background: gray;
+}
+
+.title {
+	font-size: 120px;
+	padding-top: 10px;
+}
+
+.q {
+	color: rgb(102, 153, 204);
+	font-size: 180px;
+}
+
+.tagline {
+	
+	font-size: 25px;
+	border-top: 2px solid black ;
+	border-bottom: 2px solid black;
+	width: 400px;
+	margin: 0px auto;
+}
+
+.date {
+	width: 800px;
+	margin: 0px auto;
+	height: 65px;
+	text-align: center;
+	font-size: 40px;
+	padding-top: 20px;
+	
+
+}
+.summary {
+	display: none;
+}
+.specificTask {
+	border-bottom: 4px solid gray;
+	margin-left: 10px;
+}
+
+.specificTask:hover {
+	background-color: gray;
+	color: black;
+}
+
+.donezo {
+	text-decoration: line-through;
+}
+
+
+input {
+	display: none;
+}
+
+.edit span.specificTask {
+	display: none;
+}
+
+.edit input {
+	display: initial;
+	font-size: 18px;
+	margin-left: 9px;
+	width: 300px;
+}
+
+.summary {
+	width: 1250px;
+	height: 65px;
+	text-align: center;
+}
+
+.todo {
+	width: 1250px;
+	height: 150px;
+	font-size: 22px;
+	
+	
+}
+
+.activity {
+	padding-top: 20px;
+}
+
+.done {
+	border: 2px solid gray;
+	border-radius: 100%;
+	margin-left: 440px;
+	font-size: 18px;
+	padding: 5px;
+}
+
+.done:hover {
+	background-color: green;
+	color: black;
+	font-size: 30px;
+	font-style: italic;
+}
+
+.everythingElse {
+	width: 1250px;
+	border: 1px solid black;
+	height: 290px;
+	background-color: rgb(102, 153, 204);
+}

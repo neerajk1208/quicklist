@@ -1,0 +1,115 @@
+<!--
+QuickList:
+
+Below is the structure for this to-do list web application. 
+
+Header: Quicklist
+
+Description: Track everything you need to get done today!
+
+Date: today's full date (Monday, September 15, 2015)
+Today's Time: 4:54 PM
+
+Done button and X button -> Activity: Do the dishes -> Complete by: 5:54 PM
+
+If x is clicked
+	remove box
+	go to blank box at the bottom
+
+Whenever in a box
+	create new blank box below it
+
+If done is clicked
+	Item moves to Finished Tasks Section
+	Italics
+	Color
+
+Undo X -> completed activity: Do the dishes -> Target Completion Time, Actual Completion Time: 
+Undo will move item back to list in its corresponding spot
+X will remove it and not add a blank box
+
+Large Structure: 
+
+Header
+
+Date
+
+Summary: You have completed 4 of 14 tasks today. Good job! || You haven't completed any activities yet.
+
+To-Do List
+
+	Activities, Completed By
+	Items with buttons
+
+Finiahed Tasks
+	
+	Activities, Completed By
+	Items with buttons
+
+
+
+-->
+
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>QuickList </title>
+		<link rel="stylesheet" type="text/css" href="assets/main.css">
+	</head>
+
+	<body>
+		<div class="top"> 
+			<header class="title"><span class="q">Q</span>uickList </header>
+			<div class="tagline"> Your 3 steps to winning today. </div>
+		</div>
+
+		<div class="everythingElse">
+
+		<div class="date"><b> Priorities for Monday, September 30, 2015</b> </div>
+		<section class="summary">
+			<div>You have completed <span class="number1">10 </span> of </span class="number2"> 25 </span> tasks. </div>
+		</section>
+
+
+		<section class="todo">
+			<div class="activity"> 
+				<span class="done">Done</span>
+				 
+				<span class="specificTask"> Be respectful of others. </span>
+				<input value="Be respectful of others."/> 
+			</div>
+			<div class="activity"> 
+				<span class="done">Done</span> 
+				
+				<span class="specificTask"> Make sure to complete your work with honesty. </span>
+				<input value ="Make sure to complete your work with honesty."/> 
+			</div>
+			<div class="activity"> 
+				<span class="done">Done</span> 
+				
+				<span class="specificTask"> Never give up.  </span>
+				<input value = "Never give up."/> 
+			</div>
+			
+		</section>
+		</div>
+		<script src="main.js"> </script>
+
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
