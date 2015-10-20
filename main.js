@@ -31,7 +31,7 @@ task1.addEventListener("click", function() {
 });
 
 input1.addEventListener("blur", function() {
-	activity1.className ="activity"
+	activity1.className ="activity";
 	task1.className = "specificTask";
 	task1.innerHTML = input1.value || "1st Priority";
 })
