@@ -24,54 +24,39 @@ var done3 = dones[2];
 
 console.log(dones)
 
+var highlightText = function(taskContent, task, input) {
+	taskContent.addEventListener("click", function() {
+		task.className = "task edit";
+		input.setSelectionRange(0, input.value.length)
+	});
+}
 
-task1.addEventListener("click", function() {
-	activity1.className = "task edit";
-	input1.setSelectionRange(0, input1.value.length)
-});
+highlightText(task1, activity1, input1);
+highlightText(task2, activity2, input2);
+highlightText(task3, activity3, input3);
 
-input1.addEventListener("blur", function() {
-	activity1.className ="task";
-	task1.className = "task-content";
-	task1.innerHTML = input1.value || "1st Priority";
-})
+var removeEdit = function(taskContent, task, input) {
+	input.addEventListener("blur", function() {
+		task.className ="task";
+		taskContent.className = "task-content";
+		taskContent.innerHTML = input.value || "1st Priority";
+	})
+}
 
-done1.addEventListener("click", function() {
-	task1.className = "task-content completed";
-})
+removeEdit(task1, activity1, input1);
+removeEdit(task2, activity2, input2);
+removeEdit(task3, activity2, input3);
 
+var taskComplete = function(done, taskContent) {
+	done.addEventListener("click", function() {
+		taskContent.className = "task-content completed";
+	})
+}
 
-task2.addEventListener("click", function() {
-	activity2.className = "task edit";
-	input2.setSelectionRange(0, input2.value.length)
-});
+taskComplete(done1, task1);
+taskComplete(done2, task2);
+taskComplete(done3, task3);
 
-input2.addEventListener("blur", function() {
-	activity2.className ="task";
-	task2.className = "task-content";
-	task2.innerHTML = input2.value || "2nd Priority";
-})
-
-done2.addEventListener("click", function() {
-	task2.className = "task-content completed";
-})
-
-task3.addEventListener("click", function() {
-	activity3.className = "task edit";
-	input3.setSelectionRange(0, input3.value.length)
-});
-
-input3.addEventListener("blur", function() {
-	activity3.className ="task"
-	task3.className = "task-content";
-	task3.innerHTML = input3.value || "3rd Priority";
-})
-
-done3.addEventListener("click", function() {
-	task3.className = "task-content completed";
-})
-
-console.log("hello")
 
 
 
