@@ -30,6 +30,30 @@ for (var i = 0; i<tasks.length; i++) {
 	taskComplete(dones[i], tasks[i]);
 };
 
+$(document).ready(function() {
+  $('.add').click(function(event) {
+  	var div= document.getElementsByClassName("task-content")
+  	var divLate = div[div.length - 1];
+    $(".build-list").append(divLate);
+  });
+});
+
+// var add = document.querySelector(".add");
+// var addTask = function(item) {
+// 	item.addEventListener("click", function() {
+// 		var div = document.createElement('div');
+// 		div.className = "task-content"
+// 		document.body.appendChild(div);
+// 		div.innerHTML = "hello my name is Neeraj";
+// 	});
+// }
+
+// addTask(add);
+// //create a function that will create a new item in the task list
+// //function will 
+// 	//add an event listener to the add button
+// 		//upon a click
+// 			//value of input in add line will become innerHTML to a new task in list, right after last one
 
 
 

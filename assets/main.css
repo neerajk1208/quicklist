@@ -108,6 +108,9 @@ input {
 	font-size: 18px;
 	margin-left: 9px;
 	width: 300px;
+	border: 1px solid black;
+	border-radius: 10px;
+	background-color: gray;
 }
 
 .completed {
@@ -128,11 +131,30 @@ input {
 
 .done:hover {
 	background-color: green;
-	color: black;
+
+}
+
+.add {
+	border: 2px solid gray;
+	display: inline-block;
+	width: 32px;
+	margin-left: 440px;
+	font-size: 18px;
+	padding: 10px;
+}
+
+.write-task{
+	display: inline-block;
+	margin-left: 8px;
 }
 
 .add-task {	
 	padding-top: 40px;
+}
+
+.add:hover {
+	background-color: green;
+	border: 2px solid black;
 }
 
 
