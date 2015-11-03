@@ -1,7 +1,13 @@
 /* GENERAL FORMATTING */
 
+@font-face {
+  font-family: "sfText";
+  src: url("../../zest/font.ttf") format("truetype");
+}
+
 body {
 	background: gray;
+	font-family: "sfText";
 }
 
 /* TOP SECTION */
@@ -41,6 +47,7 @@ body {
 .build-list{
 	
 	border: 1px solid black;
+	
 	background-color: rgb(102, 153, 204);
 }
 
@@ -70,8 +77,8 @@ body {
 
 .list {
 	width: 1250px;
-	height: 150px;
-	font-size: 22px;	
+	font-size: 22px;
+	padding-bottom: 20px;	
 }
 
 /* TASKS WITHIN LIST */
@@ -122,7 +129,13 @@ input {
 .done:hover {
 	background-color: green;
 	color: black;
-	
-
 }
+
+.add-task {	
+	padding-top: 40px;
+}
+
+
+
+
 
