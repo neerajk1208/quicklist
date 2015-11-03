@@ -1,24 +1,31 @@
+/* GENERAL FORMATTING */
 
-
-.top {
-	width: 1250px;
-	height: 300px;
-
-	text-align: center;
+body {
 	background: gray;
 }
 
-.title {
-	font-size: 120px;
-	padding-top: 10px;
+/* TOP SECTION */
+
+.company-name {
+	height: 180px;
+	text-align: center;
+	background: gray;
+	
 }
+
+.title {
+	font-size: 60px;
+	padding-top: 0px;
+}
+
+
 
 .q {
 	color: rgb(102, 153, 204);
-	font-size: 180px;
+	font-size: 100px;
 }
 
-.tagline {
+.objective {
 	
 	font-size: 25px;
 	border-top: 2px solid black ;
@@ -27,39 +34,65 @@
 	margin: 0px auto;
 }
 
+/* LIST DETAILS */
+
+/* GENERAL SECTION */
+
+.build-list{
+	
+	border: 1px solid black;
+	background-color: rgb(102, 153, 204);
+}
+
+/* DATE */
+
 .date {
 	width: 800px;
 	margin: 0px auto;
-	height: 65px;
+	height: 40px;
 	text-align: center;
-	font-size: 40px;
-	padding-top: 20px;
-	
+	font-size: 25px;
+	padding-top: 10px;
+}
 
-}
+/* SUMMARY */
+
 .summary {
-	display: none;
+	height: 25px;
+	text-align: center;
+	width: 250px;
+	border: 4px solid gray;
+	margin: 0px auto;
+	padding-top: 8px;
 }
-.specificTask {
+
+/* LIST SECTION */
+
+.list {
+	width: 1250px;
+	height: 150px;
+	font-size: 22px;	
+}
+
+/* TASKS WITHIN LIST */
+
+.task {
+	padding-top: 20px;
+}
+
+.task-content {
 	border-bottom: 4px solid gray;
 	margin-left: 10px;
 }
 
-.specificTask:hover {
+.task-content:hover {
 	background-color: gray;
 	color: black;
 }
 
-.donezo {
-	text-decoration: line-through;
-}
-
+/* ENGAGEMENT WITH LIST */
 
 input {
-	display: none;
-}
-
-.edit span.specificTask {
 	display: none;
 }
 
@@ -70,22 +103,12 @@ input {
 	width: 300px;
 }
 
-.summary {
-	width: 1250px;
-	height: 65px;
-	text-align: center;
+.completed {
+	text-decoration: line-through;
 }
 
-.todo {
-	width: 1250px;
-	height: 150px;
-	font-size: 22px;
-	
-	
-}
-
-.activity {
-	padding-top: 20px;
+.edit span.task-content {
+	display: none;
 }
 
 .done {
@@ -103,9 +126,3 @@ input {
 
 }
 
-.everythingElse {
-	width: 1250px;
-	border: 1px solid black;
-	height: 290px;
-	background-color: rgb(102, 153, 204);
-}
