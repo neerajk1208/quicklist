@@ -30,31 +30,29 @@ for (var i = 0; i<tasks.length; i++) {
 	taskComplete(dones[i], tasks[i]);
 };
 
-$(document).ready(function() {
-  $('.add').click(function(event) {
-  	var div= document.getElementsByClassName("task-content")
-  	var divLate = div[div.length - 1];
-    $(".build-list").append(divLate);
-  });
-});
 
-// var add = document.querySelector(".add");
-// var addTask = function(item) {
-// 	item.addEventListener("click", function() {
-// 		var div = document.createElement('div');
-// 		div.className = "task-content"
-// 		document.body.appendChild(div);
-// 		div.innerHTML = "hello my name is Neeraj";
-// 	});
-// }
-
-// addTask(add);
-// //create a function that will create a new item in the task list
-// //function will 
-// 	//add an event listener to the add button
-// 		//upon a click
-// 			//value of input in add line will become innerHTML to a new task in list, right after last one
-
-
+var add = document.querySelector(".add");
+var addTask = document.querySelector(".write-task")
+console.log(addTask)
+add.addEventListener("click", function() {
+		//create a div
+		var newElement = document.createElement("div");
+		//add the classname task to the div
+		newElement.className = "task";
+		//create a span
+		var doneSpan = document.createElement("span");
+		//add classname done and innerHTML done to the span
+		doneSpan.className = "done";
+		doneSpan.innerHTML = "Done";
+		//add another span
+		var taskDetails = document.createElement("span");
+		//add classname and innerhtml to this span as well
+		taskDetails.className = "task-content";
+		taskDetails.innerHTML = addTask.value;
+		//add first span and second span to the newelement
+		$(newElement).append(doneSpan);
+		$(newElement).append(taskDetails);
+		$(".list").append(newElement);
+	})
 
 

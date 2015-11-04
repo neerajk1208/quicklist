@@ -135,7 +135,7 @@ input {
 }
 
 .add {
-	border: 2px solid gray;
+	border: 2px dotted black;
 	display: inline-block;
 	width: 32px;
 	margin-left: 440px;
@@ -146,6 +146,9 @@ input {
 .write-task{
 	display: inline-block;
 	margin-left: 8px;
+	border: 1px solid black;
+	font-size: 22px;
+	padding: 5px;
 }
 
 .add-task {	
