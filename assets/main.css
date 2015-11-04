@@ -131,7 +131,19 @@ input {
 
 .done:hover {
 	background-color: green;
+	opacity: 0.7;
 
+}
+
+.remove {
+	border: 2px solid gray;
+	border-radius: 10%;
+	font-size: 18px;
+	padding: 5px;
+}
+
+.remove:hover {
+	background-color: red;
 }
 
 .add {
@@ -160,7 +172,9 @@ input {
 	border: 2px solid black;
 }
 
-
+.hide {
+	display: none;
+}
 
 
 

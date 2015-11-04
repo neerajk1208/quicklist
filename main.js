@@ -3,6 +3,8 @@ var activities = document.getElementsByClassName("task");
 var inputs = document.getElementsByTagName("input") 
 var dones = document.getElementsByClassName("done");
 
+var removes = document.getElementsByClassName("remove");
+
 var highlightText = function(taskContent, task, input) {
 	taskContent.addEventListener("click", function() {
 		task.className = "task edit";
@@ -19,8 +21,29 @@ var removeEdit = function(taskContent, task, input) {
 }
 
 var taskComplete = function(done, taskContent) {
-	done.addEventListener("click", function() {
-		taskContent.className = "task-content completed";
+	if (done.innerHTML = "done") {
+		done.addEventListener("click", function() {
+			if (done.innerHTML = "Donasd") {
+				taskContent.className = "task-content completed";
+				done.innerHTML = "undo";
+			}
+		});
+	} else {
+		done.addEventListener("click", function() {
+			if (done.innerHTML = "undo") {
+				taskContent.className = "task-content";
+				done.innerHTML = "Done";
+			}
+		});
+	}
+}
+
+
+var removeTask = function(remove, taskContent, done) {
+	remove.addEventListener("click", function() {
+		taskContent.className = "hide";
+		done.className = "hide";
+		remove.className = "hide";
 	})
 }
 
@@ -28,6 +51,7 @@ for (var i = 0; i<tasks.length; i++) {
 	highlightText(tasks[i], activities[i], inputs[i]);
 	removeEdit(tasks[i], activities[i], inputs[i]);
 	taskComplete(dones[i], tasks[i]);
+	removeTask(removes[i], tasks[i], dones[i]);
 };
 
 
@@ -53,6 +77,13 @@ add.addEventListener("click", function() {
 		$(newElement).append(doneSpan);
 		$(newElement).append(taskDetails);
 		$(".list").append(newElement);
+		tasks = document.getElementsByClassName("task-content");
+		activities = document.getElementsByClassName("task");
+		inputs = document.getElementsByTagName("input") 
+		dones = document.getElementsByClassName("done");
+		highlightText(tasks[tasks.length - 1], activities[activities.length - 1], inputs[inputs.length - 1]);
+		removeEdit(tasks[tasks.length - 1], activities[activities.length - 1], inputs[inputs.length - 1]);
+		taskComplete(dones[dones.length - 1], tasks[tasks.length - 1]);
 	})
 
 
