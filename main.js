@@ -55,6 +55,8 @@ for (var i = 0; i<tasks.length; i++) {
 };
 
 
+
+
 var add = document.querySelector(".add");
 var addTask = document.querySelector(".write-task")
 console.log(addTask)
